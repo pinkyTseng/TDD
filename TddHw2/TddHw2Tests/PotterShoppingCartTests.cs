@@ -70,5 +70,15 @@ namespace TddHw2.Tests
             int actual = target.calculateFee(first);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void buyFirst_1_Second_2_Third_2()
+        {
+            PotterShoppingCart target = new PotterShoppingCart();
+            int[] first = new int[] { 1, 2, 2, 0, 0 };
+            int expected = 460;
+            int actual = target.calculateFee(first);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
