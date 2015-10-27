@@ -17,9 +17,8 @@ namespace TddHw2.Tests
             PotterShoppingCart target = new PotterShoppingCart();
             int[] first = new int[] { 1, 0, 0, 0, 0 };
             int expected = 100;
-            int actual = target.calculateFee();
+            int actual = target.calculateFee(first);
             Assert.AreEqual(expected, actual);
-
         }
     }
 }
