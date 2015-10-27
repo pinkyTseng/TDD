@@ -19,6 +19,7 @@ namespace TddHw2.Tests
             int expected = 100;
             int actual = target.calculateFee();
             Assert.AreEqual(expected, actual);
+
         }
     }
 }
