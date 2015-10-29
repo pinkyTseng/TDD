@@ -72,7 +72,11 @@ namespace TddHw2.Tests
         {
             PotterShoppingCart target = new PotterShoppingCart();
             List<Book> first = new List<Book>{
-                    new Book {name =  "Harry Potter1", Cost= 100, count = 1}
+                    new Book {name =  "Harry Potter1", Cost= 100, count = 1},
+                    new Book {name =  "Harry Potter2", Cost= 100, count = 1},
+                    new Book {name =  "Harry Potter3", Cost= 100, count = 1},
+                    new Book {name =  "Harry Potter4", Cost= 100, count = 1},
+                    new Book {name =  "Harry Potter5", Cost= 100, count = 1}
                 };
             int expected = 375;
             int actual = target.calculateFee(first);
