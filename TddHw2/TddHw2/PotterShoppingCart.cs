@@ -38,16 +38,18 @@ namespace TddHw2
         int getMaxDiffCounts(Hashtable remainOrders )
         {
             int diffCounts = 0;
-            List<int> list = remainOrders.Keys.Cast<int>().ToList();
-            foreach (int key in list)
+            List<string> list = remainOrders.Keys.Cast<string>().ToList();
+            foreach (string key in list)
             {
-                int vNew = (int) remainOrders[key];
-                if (vNew >= 1)
+                Book bookItem = (Book)remainOrders[key];
+                //int vNew = bookItem.count;
+                //int vNew = remainOrders[key];
+                if (bookItem.count >= 1)
                 {
                     diffCounts++;
-                    vNew--;
-                    remainOrders[key] = vNew;
-                    if (vNew == 0)
+                    bookItem.count--;
+                    //bookItem. = vNew;
+                    if (bookItem.count == 0)
                     {
                         remainOrders.Remove(key);
                     }
