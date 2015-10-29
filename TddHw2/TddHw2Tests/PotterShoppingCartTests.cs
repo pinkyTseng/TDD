@@ -19,7 +19,6 @@ namespace TddHw2.Tests
             List<Book> first= new List<Book>{
                     new Book {name =  "Harry Potter1", Cost= 100, count = 1}
                 };
-            //Book 
             //int[] first = new int[] { 1, 0, 0, 0, 0 };
             int expected = 100;
             int actual = target.calculateFee(first);
@@ -31,7 +30,8 @@ namespace TddHw2.Tests
         {
             PotterShoppingCart target = new PotterShoppingCart();
             List<Book> first = new List<Book>{
-                    new Book {name =  "Harry Potter1", Cost= 100, count = 1}
+                    new Book {name =  "Harry Potter1", Cost= 100, count = 1},
+                    new Book {name =  "Harry Potter2", Cost= 100, count = 1}
                 };
             int expected = 190;
             int actual = target.calculateFee(first);
