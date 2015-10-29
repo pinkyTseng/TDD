@@ -9,7 +9,7 @@ namespace TddHw2
 {
     public class PotterShoppingCart
     {
-        public int calculateFee(int[] orderCountArray)
+        public int calculateFee(List<Book> orderCountArray)
         {
             int total = 0;
             Hashtable remainOrders= initHashtable(orderCountArray);
@@ -18,20 +18,18 @@ namespace TddHw2
                 total += getMaxDiffCounts(remainOrders);
             }
 
-
-
             return total;
         }
 
-        Hashtable initHashtable(int[] orderCountArray)
+        Hashtable initHashtable(List<Book> orderCountArray)
         {
             Hashtable remainOrders = new Hashtable();
-            for (int i = 0; i < orderCountArray.Length; i++)
+            for (int i = 0; i < orderCountArray.Count; i++)
             {
-                if (orderCountArray[i] != 0)
-                {
-                    remainOrders.Add(i + 1, orderCountArray[i]);
-                }
+                //if (orderCountArray[i] != 0)
+                //{
+                    remainOrders.Add(orderCountArray[i].name , orderCountArray[i]);
+                //}
                 //remainOrders.Add(i+1, orderCountArray[i]);
             }
             return remainOrders;
@@ -86,5 +84,12 @@ namespace TddHw2
             }
             return (int) (basePrice*count*discount);
         }
+    }
+
+    public class Book
+    {
+        public int Cost { get; set; }
+        public int count { get; set; }
+        public string name { get; set; }
     }
 }
